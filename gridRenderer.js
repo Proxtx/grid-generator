@@ -48,6 +48,23 @@ export class GridRenderer {
         this.ctx.arc(position.x, position.y, this.grid.options.width/2, 0, 2 * Math.PI);
         this.ctx.fill();
         break;
+      case "square":
+        this.ctx.save()
+        this.ctx.fillStyle = this.grid.options.color;
+        this.ctx.translate(position.x-this.grid.options.width/2, position.y-this.grid.options.width/2)
+        this.ctx.rotate(this.grid.options.rotation * (Math.PI / 180))
+        this.ctx.fillRect(0, 0, this.grid.options.width, this.grid.options.width);
+        this.ctx.restore();
+        break;
+      case "cross":
+        this.ctx.save()
+        this.ctx.fillStyle = this.grid.options.color;
+        this.ctx.translate(position.x, position.y)
+        this.ctx.rotate(this.grid.options.rotation * (Math.PI / 180))
+        this.ctx.fillRect(-(this.grid.options.width*1.5), -this.grid.options.width/2, this.grid.options.width*3, this.grid.options.width);
+        this.ctx.fillRect(-this.grid.options.width/2, -(this.grid.options.width*1.5), this.grid.options.width, this.grid.options.width*3);
+        this.ctx.restore();
+        break;
         //TODO Square, Kross (Kross arm length option)
     }
   }
