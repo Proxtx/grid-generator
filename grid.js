@@ -6,7 +6,7 @@ export class Grid {
   setOptions (options){
     this.options = {
       color: "black",
-      renderLines: false,
+      renderLines: true,
       cellWidth: 15,
       cellHeight: 15,
       rotation: 20,
