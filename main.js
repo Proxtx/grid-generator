@@ -8,5 +8,7 @@ canvas.height = 200;
 const ctx = canvas.getContext("2d");
 
 
-let renderer = new GridRenderer(ctx, new Grid({}))
+let renderer = new GridRenderer(ctx, new Grid({
+  renderLines: true
+}))
 renderer.render();
