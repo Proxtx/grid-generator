@@ -9,6 +9,6 @@ const ctx = canvas.getContext("2d");
 
 
 let renderer = new GridRenderer(ctx, new Grid({
-  renderLines: true
+  renderLines: false
 }))
 renderer.render();
