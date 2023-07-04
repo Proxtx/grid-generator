@@ -3,8 +3,8 @@ import {Grid} from "./grid.js";
 import {GridRenderer} from "./gridRenderer.js";
 
 const canvas = document.getElementById("canvas");
-canvas.width = 200;
-canvas.height = 200;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 const ctx = canvas.getContext("2d");
 
 
