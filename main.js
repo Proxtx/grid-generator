@@ -11,4 +11,9 @@ const ctx = canvas.getContext("2d");
 let renderer = new GridRenderer(ctx, new Grid({
   renderLines: false
 }))
+let renderer2 = new GridRenderer(ctx, new Grid({
+  renderLines: false,
+  rotation: 0
+}))
 renderer.render();
+renderer2.render();
